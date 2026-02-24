@@ -93,7 +93,6 @@ pred completeJob[w: Workplace] {
     #({p: Person | some pl: Placement | p in pl.people and pl.location = w}) >= w.requiredPeople
     #({m: Material | some pl: Placement | m in pl.materials and pl.location = w}) >= w.requiredMaterials
     
-    // Effect: job done (optional: remove resources or mark as complete)
 }
 //Transition Fact for Alloy simulation
 fact trans {
